@@ -49,6 +49,8 @@ export class TabsPage {
   }
 
   logout() {
-    this.navCtrl.pop();
+    this.navCtrl.pop().catch(() => {
+      console.log('Cannot go back.');
+    });
   }
 }
